@@ -448,12 +448,16 @@ header.site-header{
 }
 .price-card .req{
   background:var(--cream);
-  margin:18px -28px -36px;padding:14px 28px;
-  font-size:12.5px;color:var(--ink-soft);
+  margin:18px -28px -36px;padding:14px 22px;
+  color:var(--ink-soft);
   border-top:1px solid var(--line);
-  text-wrap:pretty;line-height:1.7;
+  display:flex;flex-direction:column;gap:4px;
+  text-wrap:pretty;line-height:1.65;
 }
-.price-card .req strong{color:var(--navy)}
+.price-card .req strong{
+  color:var(--navy);font-size:11px;letter-spacing:.12em;
+}
+.price-card .req .req-value{font-size:12.5px}
 .price-card .req .nowrap{white-space:nowrap}
 @media (max-width:880px){
   .price-grid{grid-template-columns:1fr}
@@ -866,7 +870,8 @@ footer.site-footer{
           <li>受験料</li>
         </ul>
         <div class="req">
-          <strong>受講資格：</strong>2027年4月1日時点で満18歳以上の方
+          <strong>受講資格</strong>
+          <span class="req-value">2027年4月1日時点で満18歳以上の方</span>
         </div>
       </div>
 
@@ -883,7 +888,8 @@ footer.site-footer{
           <li>受験料</li>
         </ul>
         <div class="req">
-          <strong>受講資格：</strong>2級タンブリング指導ライセンス<span class="nowrap">の認定登録者</span>
+          <strong>受講資格</strong>
+          <span class="req-value">2級タンブリング指導ライセンス<span class="nowrap">の認定登録者</span></span>
         </div>
       </div>
 
@@ -898,7 +904,8 @@ footer.site-footer{
           <li>配信料</li>
         </ul>
         <div class="req">
-          <strong>対象：</strong>1級認定登録者の更新手続き
+          <strong>対象</strong>
+          <span class="req-value">1級認定登録者の更新手続き</span>
         </div>
       </div>
     </div>
