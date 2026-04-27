@@ -451,8 +451,10 @@ header.site-header{
   margin:18px -28px -36px;padding:14px 28px;
   font-size:12.5px;color:var(--ink-soft);
   border-top:1px solid var(--line);
+  text-wrap:pretty;line-height:1.7;
 }
 .price-card .req strong{color:var(--navy)}
+.price-card .req .nowrap{white-space:nowrap}
 @media (max-width:880px){
   .price-grid{grid-template-columns:1fr}
   .price-card.featured{transform:none}
@@ -881,7 +883,7 @@ footer.site-footer{
           <li>受験料</li>
         </ul>
         <div class="req">
-          <strong>受講資格：</strong>2級タンブリング指導ライセンスの認定登録者
+          <strong>受講資格：</strong>2級タンブリング指導ライセンス<span class="nowrap">の認定登録者</span>
         </div>
       </div>
 
