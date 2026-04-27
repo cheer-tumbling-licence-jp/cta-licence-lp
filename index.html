@@ -246,15 +246,19 @@ header.site-header{
 .problem-conclusion{
   text-align:center;
   font-family:var(--font-serif);
-  font-size:clamp(22px,3vw,32px);
+  font-size:clamp(20px,2.4vw,28px);
   font-weight:700;
   color:var(--navy);
-  line-height:1.6;
-  letter-spacing:.06em;
+  line-height:1.7;
+  letter-spacing:.04em;
   text-wrap:pretty;
 }
 .problem-conclusion .gold{color:var(--gold)}
 .problem-conclusion .nowrap{white-space:nowrap}
+/* 画面が広いときは「安全を理解し…コーチです。」を1行に */
+@media (min-width:700px){
+  .problem-conclusion .line2{white-space:nowrap}
+}
 
 /* ===== バリュー（4つの特徴） ===== */
 .value{background:var(--paper)}
@@ -686,7 +690,7 @@ footer.site-footer{
     <div class="problem-divider"></div>
     <p class="problem-conclusion">
       この資格が目指すのは、<br>
-      <span class="gold">安全を理解し、理論に基づいた指導ができる</span><span class="nowrap"><span class="gold">コーチ</span>です。</span>
+      <span class="line2"><span class="gold">安全を理解し、理論に基づいた指導ができるコーチ</span>です。</span>
     </p>
   </div>
 </section>
