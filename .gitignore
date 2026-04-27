@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+._*
+
+# エディタ
+.vscode/
+.idea/
+*.swp
+*~
+
+# Thumbs / 一時ファイル
+Thumbs.db
+*.tmp
+*.bak
+
+# Node（将来のビルドツール用）
+node_modules/
+dist/
+.cache/
