@@ -231,6 +231,8 @@ header.site-header{
   font-size:17px;line-height:2.1;
   color:var(--ink-soft);
   text-align:center;
+  text-wrap:pretty;
+  word-break:auto-phrase;
 }
 .problem .lead-text strong{
   color:var(--navy);font-weight:700;
@@ -396,7 +398,10 @@ header.site-header{
   text-align:center;
   border-radius:2px;
   position:relative;
+  display:flex;flex-direction:column;
 }
+.price-card .includes{flex:1 0 auto}
+.price-card .req{margin-top:auto}
 .price-card.featured{
   border:2px solid var(--gold);
   transform:translateY(-8px);
@@ -673,9 +678,8 @@ footer.site-footer{
     <p class="eyebrow center">Why Certification</p>
     <h2 class="section-title">なぜ、いま指導者に資格が必要なのか。</h2>
     <p class="lead-text">
-      チアリーディング／ダンスにおけるタンブリング指導は、<strong>一歩間違えれば重大な事故につながる分野</strong>です。<br>
-      経験や感覚だけに頼った指導では、選手の成長を妨げるだけでなく、取り返しのつかないリスクを生む可能性があります。<br><br>
-      指導者に求められるのは、「技ができること」ではなく、<strong>安全に導ける理論と判断力</strong>です。
+      タンブリング指導は、<strong>一歩間違えれば重大な事故につながる分野</strong>。経験や感覚だけに頼った指導では、選手の成長を妨げるだけでなく、取り返しのつかないリスクを生みかねません。<br><br>
+      いま指導者に求められるのは、「技ができること」ではなく、<strong>安全に導ける理論と判断力</strong>です。
     </p>
     <div class="problem-divider"></div>
     <p class="problem-conclusion">
