@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cheer-tumbling-licence-jp.github.io/cta-licence-lp/sitemap.xml
