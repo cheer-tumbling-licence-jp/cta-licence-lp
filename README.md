@@ -2,7 +2,7 @@
 
 一般社団法人チアタンブリング協会の指導ライセンスのランディングページ。
 
-- **公開URL**: <https://cheer-tumbling-licence-jp.github.io/cta-licence-lp/>
+- **公開URL**: <https://licence.cheer-tumbling.jp/>
 - **GitHubリポジトリ**: <https://github.com/cheer-tumbling-licence-jp/cta-licence-lp>
 
 ---
@@ -38,7 +38,7 @@ Claude Codeで「**LPの〇〇を△△に変えて公開して**」と頼むだ
 4. **「Summary」欄に何を変えたか書く**（例：`受講料を更新`）
 5. **「Commit to main」** ボタンをクリック
 6. 上部の **「Push origin」** ボタンをクリック
-7. 1〜2分後、`https://cheer-tumbling-licence-jp.github.io/cta-licence-lp/` に反映
+7. 1〜2分後、`https://licence.cheer-tumbling.jp/` に反映
 
 ### B. ターミナルで `publish.sh`（コマンド一発で公開）
 
@@ -87,11 +87,13 @@ LP/
 
 ---
 
-## 公開URLを変えたいとき
+## 公開URLについて
 
-現状のURLは `/cta-licence-lp/` です。`/LP/` 部分を変えたい場合は、リポジトリ名を変更します。Claudeに「リポジトリ名を **〇〇** に変更して」と頼むか、GitHub上で `Settings → Repository name` から変更できます。
+独自ドメイン **`licence.cheer-tumbling.jp`** で公開しています（ムームードメインで取得した `cheer-tumbling.jp` のサブドメイン）。
 
-独自ドメイン（例：`license.cheer-tumbling.org`）にすることも可能です。ドメインを取得済みでしたらClaudeにご相談ください。
+- ドメイン管理：ムームードメイン（年1回更新・自動更新ON）
+- DNS設定：ムームーDNS にて `licence` のCNAMEレコードを GitHub Pages に向けて設定済み
+- リポジトリ直下の `CNAME` ファイルが独自ドメインを指定しています（**このファイルは消さないこと**）
 
 ---
 

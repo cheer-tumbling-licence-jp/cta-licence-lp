@@ -7,7 +7,7 @@
 # 何が起こるか：
 #   1. 変更されたファイルをすべてGitに記録
 #   2. GitHubに送信
-#   3. 数分後、 https://cheer-tumbling-licence-jp.github.io/cta-licence-lp/ に自動反映
+#   3. 数分後、 https://licence.cheer-tumbling.jp/ に自動反映
 # ============================================================
 
 set -e
@@ -36,7 +36,7 @@ git push origin main
 
 echo ""
 echo "✅ 送信完了！1〜2分後に下記URLへ自動反映されます："
-echo "   https://cheer-tumbling-licence-jp.github.io/cta-licence-lp/"
+echo "   https://licence.cheer-tumbling.jp/"
 echo ""
 echo "（反映状況の確認）"
 echo "   https://github.com/cheer-tumbling-licence-jp/cta-licence-lp/actions"
