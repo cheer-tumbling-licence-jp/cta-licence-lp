@@ -641,12 +641,15 @@ header.site-header{
 }
 .team-cta-lead{
   font-size:13px;color:rgba(255,255,255,.8);
-  margin:0 0 18px;line-height:1.7;
+  margin:0 0 22px;line-height:1.7;
+}
+.team-cta-actions{
+  display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
 }
 .team-cta .btn-primary{
-  display:inline-block;
+  display:inline-flex;align-items:center;gap:8px;
   background:var(--gold);color:var(--navy-deep);
-  padding:14px 32px;border-radius:2px;
+  padding:14px 28px;border-radius:2px;
   font-weight:700;text-decoration:none;
   letter-spacing:.06em;font-size:14.5px;
   transition:transform .15s,box-shadow .2s;
@@ -655,9 +658,89 @@ header.site-header{
   transform:translateY(-2px);
   box-shadow:0 8px 24px rgba(201,162,71,.3);
 }
+.team-cta .btn-pdf{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:#fff;
+  padding:14px 26px;border-radius:2px;
+  border:1px solid var(--gold);
+  font-weight:700;text-decoration:none;
+  letter-spacing:.06em;font-size:14px;
+  transition:background .2s,border-color .2s;
+}
+.team-cta .btn-pdf:hover{background:rgba(201,162,71,.12)}
+.team-cta .btn-pdf .pdf-icon{
+  display:inline-block;background:var(--gold);color:var(--navy-deep);
+  font-family:var(--font-en);font-size:9px;letter-spacing:.06em;
+  padding:2px 6px;border-radius:2px;font-weight:800;
+}
+.team-cta .btn-ghost{
+  display:inline-flex;align-items:center;
+  background:transparent;color:rgba(255,255,255,.9);
+  padding:14px 22px;border-radius:2px;
+  border:1px solid rgba(255,255,255,.25);
+  font-weight:500;text-decoration:none;
+  letter-spacing:.04em;font-size:13.5px;
+  transition:color .2s,border-color .2s;
+}
+.team-cta .btn-ghost:hover{color:#fff;border-color:rgba(255,255,255,.55)}
 @media (max-width:880px){
   .team-grid{grid-template-columns:1fr}
   .team-features{grid-template-columns:1fr}
+  .team-cta-actions{flex-direction:column;align-items:stretch}
+  .team-cta .btn-primary,.team-cta .btn-pdf,.team-cta .btn-ghost{justify-content:center}
+}
+
+/* ===== 申込CTA：チーム講習サブブロック ===== */
+.apply-team-block{
+  margin-top:48px;padding-top:36px;
+  border-top:1px dashed var(--line);
+  text-align:center;
+}
+.apply-team-block .label{
+  display:inline-block;
+  font-family:var(--font-en);
+  letter-spacing:.22em;
+  color:var(--gold);font-size:11.5px;font-weight:600;
+  margin-bottom:10px;
+}
+.apply-team-block h3{
+  font-family:var(--font-serif);
+  font-size:20px;color:var(--navy);font-weight:900;
+  margin:0 0 8px;letter-spacing:.04em;
+}
+.apply-team-block .lead{
+  color:var(--ink-soft);font-size:13.5px;margin:0 0 22px;
+}
+.apply-team-block .actions{
+  display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
+}
+.apply-team-block .btn-team-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--navy);color:#fff;
+  padding:13px 28px;border-radius:2px;
+  font-weight:700;text-decoration:none;
+  letter-spacing:.06em;font-size:14px;
+  transition:background .2s,transform .15s;
+}
+.apply-team-block .btn-team-primary:hover{background:var(--navy-deep);transform:translateY(-2px)}
+.apply-team-block .btn-team-pdf{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;color:var(--navy);
+  padding:13px 24px;border-radius:2px;
+  border:1px solid var(--navy);
+  font-weight:700;text-decoration:none;
+  letter-spacing:.06em;font-size:14px;
+  transition:background .2s;
+}
+.apply-team-block .btn-team-pdf:hover{background:var(--cream)}
+.apply-team-block .btn-team-pdf .pdf-icon{
+  display:inline-block;background:var(--navy);color:#fff;
+  font-family:var(--font-en);font-size:9px;letter-spacing:.06em;
+  padding:2px 6px;border-radius:2px;font-weight:800;
+}
+@media (max-width:600px){
+  .apply-team-block .actions{flex-direction:column;align-items:stretch}
+  .apply-team-block .btn-team-primary,.apply-team-block .btn-team-pdf{justify-content:center}
 }
 
 /* ===== FAQ ===== */
@@ -1189,12 +1272,21 @@ footer.site-footer{
 
     <div class="team-cta">
       <p class="team-cta-lead">
-        ※ 2026年度は試験運用期間です。料金体系・日程の詳細は、ご相談時に個別にご案内いたします。<br>
+        ※ 対面プラン 受講料 29,700円／名＋対面講習費 80,000円／日、オンラインプラン 1名あたり 35,200円（試行中）。<br>
         ※ チーム講習でも資格は個人受験と同じ「チアタンブリング指導ライセンス 2級」が交付されます。
       </p>
-      <a class="btn-primary" href="mailto:cheer.tumbling.association@gmail.com?subject=%E3%80%90%E3%83%81%E3%83%BC%E3%83%A0%E8%AC%9B%E7%BF%92%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B&body=%E3%81%94%E6%89%80%E5%B1%9E%E3%83%81%E3%83%BC%E3%83%A0%E5%90%8D%EF%BC%9A%0A%E3%81%94%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%EF%BC%9A%0A%E5%B8%8C%E6%9C%9B%E5%8F%97%E8%AC%9B%E5%93%A1%E6%95%B0%EF%BC%9A%0A%E6%8F%90%E6%A1%88%E4%BC%9A%E5%A0%B4%E3%83%BB%E5%9C%B0%E5%9F%9F%EF%BC%9A%0A%E5%B8%8C%E6%9C%9B%E6%99%82%E6%9C%9F%EF%BC%9A%0A%E3%81%94%E8%B3%AA%E5%95%8F%E3%83%BB%E3%81%94%E8%A6%81%E6%9C%9B%EF%BC%9A%0A%0A%E2%80%BB%E5%8D%94%E4%BC%9A%E3%81%8B%E3%82%89%E6%95%B0%E6%97%A5%E4%BB%A5%E5%86%85%E3%81%AB%E6%8B%85%E5%BD%93%E3%82%88%E3%82%8A%E3%81%94%E9%80%A3%E7%B5%A1%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82">
-        チーム講習について問い合わせる
-      </a>
+      <div class="team-cta-actions">
+        <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSf6bsIej43tnHLbvO78ZxwwtccN9nryaNKyePhj3HtfgkEjPQ/viewform" target="_blank" rel="noopener">
+          チーム講習を申し込む →
+        </a>
+        <a class="btn-pdf" href="assets/pdf/cta-team-training-pamphlet.pdf" target="_blank" rel="noopener">
+          <span class="pdf-icon">PDF</span>
+          パンフレットを見る
+        </a>
+        <a class="btn-ghost" href="mailto:cheer.tumbling.association@gmail.com?subject=%E3%80%90%E3%83%81%E3%83%BC%E3%83%A0%E8%AC%9B%E7%BF%92%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
+          メールで問い合わせる
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -1268,7 +1360,7 @@ footer.site-footer{
       <span class="date">2027.04.15 (THU)</span>
     </div>
     <br>
-    <!-- ▼ 申込フォーム（Googleフォーム）+ 資料請求（メール） -->
+    <!-- ▼ 個人向け：申込フォーム + 資料請求（Googleフォーム） -->
     <div class="apply-cta">
       <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfAtOFAHIQDMZSkB4A6HzMgBNesmZ02pn6UELIn9Zd6jtJebg/viewform?usp=header" target="_blank" rel="noopener">申込フォームへ進む</a>
       <a class="btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSd_By9XU-ZyOG4cfNkAzY-6F7KR6ekxFtaTGVy1Fl9T35EMHw/viewform?usp=header" target="_blank" rel="noopener">まずは資料請求（無料）</a>
@@ -1277,6 +1369,24 @@ footer.site-footer{
       お問い合わせ：<a href="mailto:cheer.tumbling.association@gmail.com">cheer.tumbling.association@gmail.com</a><br>
       ※インターネット環境のご利用が難しい場合は、紙ベースの申込書にて対応いたします。事務局までお問い合わせください。
     </p>
+
+    <!-- ▼ チーム講習サブブロック（個人とは別レーン） -->
+    <div class="apply-team-block">
+      <div class="label">FOR  TEAMS</div>
+      <h3>チーム単位でお申し込みのチーム様へ</h3>
+      <p class="lead">
+        指導者数名でのご受講をご検討の場合は、専用フォーム／パンフレットをご活用ください。
+      </p>
+      <div class="actions">
+        <a class="btn-team-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSf6bsIej43tnHLbvO78ZxwwtccN9nryaNKyePhj3HtfgkEjPQ/viewform" target="_blank" rel="noopener">
+          チーム講習を申し込む →
+        </a>
+        <a class="btn-team-pdf" href="assets/pdf/cta-team-training-pamphlet.pdf" target="_blank" rel="noopener">
+          <span class="pdf-icon">PDF</span>
+          チーム講習パンフレット（無料）
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
