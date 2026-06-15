@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>タンブリング指導ライセンス｜一般社団法人 チアタンブリング協会</title>
+<title>チアタンブリング指導ライセンス｜一般社団法人 チアタンブリング協会</title>
 <meta name="description" content="チアリーディング・体操・アクロバット指導者向けの認定資格。安全管理・段階的指導・基礎構造を体系化した、現場で活きる指導者のための基礎資格です。2027年度（令和9年度）受験受講のご案内。">
 <meta name="theme-color" content="#0a2647">
 <link rel="canonical" href="https://licence.cheer-tumbling.jp/">
@@ -20,7 +20,7 @@
 <!-- ==========================================
      OGP（SNS・LINE等でシェアした時の表示）
      ========================================== -->
-<meta property="og:title" content="タンブリング指導ライセンス｜チアタンブリング協会">
+<meta property="og:title" content="チアタンブリング指導ライセンス｜チアタンブリング協会">
 <meta property="og:description" content="安全を理解し、理論に基づいた指導ができるコーチへ。CTA公式の指導者認定資格。2027年度受講受験生 受付中。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://licence.cheer-tumbling.jp/">
@@ -30,7 +30,7 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="一般社団法人 チアタンブリング協会">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="タンブリング指導ライセンス｜チアタンブリング協会">
+<meta name="twitter:title" content="チアタンブリング指導ライセンス｜チアタンブリング協会">
 <meta name="twitter:description" content="安全を理解し、理論に基づいた指導ができるコーチへ。CTA公式の指導者認定資格。">
 <meta name="twitter:image" content="https://licence.cheer-tumbling.jp/assets/ogp-card.png">
 
@@ -61,7 +61,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Course",
-  "name": "タンブリング指導ライセンス",
+  "name": "チアタンブリング指導ライセンス",
   "description": "チアリーディング・体操・アクロバット指導者向けの認定資格。安全管理・段階的指導・基礎構造の理解を体系化した、現場で活きる指導者のための基礎資格。",
   "provider": {
     "@type": "Organization",
@@ -151,11 +151,48 @@ h2.section-title{
 }
 
 /* ===== ヘッダー ===== */
+/* ===== 上部告知バー（チーム講習） ===== */
+.team-notice-bar{
+  position:sticky;top:0;z-index:101;
+  display:flex;align-items:center;justify-content:center;
+  gap:12px;
+  background:linear-gradient(90deg,#061a36 0%,#1a3a5f 50%,#061a36 100%);
+  color:#fff;text-decoration:none;
+  padding:10px 24px;
+  font-size:13.5px;letter-spacing:.04em;
+  border-bottom:1px solid var(--gold);
+  transition:background .2s;
+}
+.team-notice-bar:hover{background:linear-gradient(90deg,#04111f 0%,#0a2647 50%,#04111f 100%)}
+.team-notice-bar .new-badge{
+  background:var(--gold);color:var(--navy-deep);
+  font-family:var(--font-en);
+  font-size:10px;font-weight:700;letter-spacing:.18em;
+  padding:3px 9px;border-radius:2px;
+}
+.team-notice-bar .label{
+  font-weight:700;color:var(--gold-light);
+  font-size:14.5px;letter-spacing:.06em;
+}
+.team-notice-bar .dot{opacity:.4;color:var(--gold-light)}
+.team-notice-bar .text{color:rgba(255,255,255,.95)}
+.team-notice-bar .arrow{color:var(--gold);font-weight:700;transition:transform .2s}
+.team-notice-bar:hover .arrow{transform:translateX(4px)}
+@media (max-width:600px){
+  .team-notice-bar{font-size:11.5px;padding:8px 12px;gap:8px;flex-wrap:wrap}
+  .team-notice-bar .label{font-size:12.5px}
+  .team-notice-bar .new-badge{font-size:9px;padding:2px 7px;letter-spacing:.14em}
+  .team-notice-bar .dot{display:none}
+}
+
 header.site-header{
-  position:sticky;top:0;z-index:100;
+  position:sticky;top:42px;z-index:100;
   background:rgba(10,38,71,.96);
   backdrop-filter:blur(8px);
   border-bottom:1px solid rgba(201,162,71,.3);
+}
+@media (max-width:600px){
+  header.site-header{top:38px}
 }
 .nav{
   max-width:1200px;margin:0 auto;
@@ -527,6 +564,102 @@ header.site-header{
   margin-top:32px;text-align:center;font-size:12px;color:var(--ink-soft);
 }
 
+/* ===== チーム講習 ===== */
+.team-training{background:var(--navy-deep);color:#fff;position:relative;overflow:hidden}
+.team-training::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201,162,71,.18), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(201,162,71,.12), transparent 70%);
+  pointer-events:none;
+}
+.team-training .container{position:relative;z-index:1}
+.team-training .eyebrow{color:var(--gold-light)}
+.team-training h2.section-title{color:#fff;text-align:center}
+.team-training .section-lead{
+  color:rgba(255,255,255,.85);text-align:center;
+  max-width:720px;margin-left:auto;margin-right:auto;
+}
+.team-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:20px;
+  margin-top:40px;
+}
+.team-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(201,162,71,.4);
+  padding:32px 28px 28px;
+  border-radius:2px;
+  display:flex;flex-direction:column;
+  position:relative;
+}
+.team-card .team-level{
+  font-family:var(--font-en);
+  font-size:13px;letter-spacing:.18em;
+  color:var(--gold);font-weight:600;margin-bottom:6px;
+}
+.team-card h3{
+  font-family:var(--font-serif);
+  font-size:22px;color:#fff;
+  margin:0 0 12px;letter-spacing:.04em;
+}
+.team-card .team-desc{
+  font-size:14px;color:rgba(255,255,255,.85);
+  line-height:1.75;margin:0 0 18px;
+}
+.team-card .team-meta{
+  list-style:none;margin:0;padding:18px 0 0;
+  border-top:1px dashed rgba(201,162,71,.4);
+  font-size:13px;color:rgba(255,255,255,.8);
+}
+.team-card .team-meta li{
+  padding:5px 0;padding-left:20px;position:relative;
+}
+.team-card .team-meta li::before{
+  content:"✦";position:absolute;left:0;color:var(--gold);
+  font-weight:700;font-size:11px;top:6px;
+}
+.team-features{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+  margin-top:30px;
+}
+.team-feature{
+  background:rgba(0,0,0,.18);
+  border-left:2px solid var(--gold);
+  padding:16px 18px;
+  font-size:13px;color:rgba(255,255,255,.85);
+  line-height:1.65;
+}
+.team-feature strong{
+  display:block;color:var(--gold-light);
+  font-size:14px;margin-bottom:4px;letter-spacing:.04em;
+}
+.team-cta{
+  text-align:center;margin-top:36px;
+  padding:28px 24px;
+  background:rgba(201,162,71,.06);
+  border:1px solid rgba(201,162,71,.4);
+}
+.team-cta-lead{
+  font-size:13px;color:rgba(255,255,255,.8);
+  margin:0 0 18px;line-height:1.7;
+}
+.team-cta .btn-primary{
+  display:inline-block;
+  background:var(--gold);color:var(--navy-deep);
+  padding:14px 32px;border-radius:2px;
+  font-weight:700;text-decoration:none;
+  letter-spacing:.06em;font-size:14.5px;
+  transition:transform .15s,box-shadow .2s;
+}
+.team-cta .btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(201,162,71,.3);
+}
+@media (max-width:880px){
+  .team-grid{grid-template-columns:1fr}
+  .team-features{grid-template-columns:1fr}
+}
+
 /* ===== FAQ ===== */
 .faq{background:var(--cream)}
 .faq h2.section-title{text-align:center}
@@ -673,6 +806,18 @@ footer.site-footer{
 <body>
 
 <!-- ====================================================
+     上部告知バー（チーム講習 受付窓口）
+     画面最上部に常時表示・sticky。スマホでは折返し対応。
+     ==================================================== -->
+<a class="team-notice-bar" href="#team">
+  <span class="new-badge">NEW</span>
+  <span class="label">チーム単位の出張講習</span>
+  <span class="dot">·</span>
+  <span class="text">受付窓口 開設中</span>
+  <span class="arrow">→</span>
+</a>
+
+<!-- ====================================================
      ヘッダー（ナビゲーション）
      編集ポイント：
      - ロゴ画像 → assets/cta-logo.png を差し替え
@@ -692,6 +837,7 @@ footer.site-footer{
       <a href="#career">取得メリット</a>
       <a href="#flow">受講の流れ</a>
       <a href="#pricing">受講料</a>
+      <a href="#team">チーム講習</a>
       <a href="#faq">よくある質問</a>
     </nav>
     <a class="nav-cta" href="#apply">お申込み</a>
@@ -949,7 +1095,7 @@ footer.site-footer{
         </ul>
         <div class="req">
           <strong>受講資格</strong>
-          <span class="req-value">2級タンブリング指導ライセンス<span class="nowrap">の認定登録者</span></span>
+          <span class="req-value">2級チアタンブリング指導ライセンス<span class="nowrap">の認定登録者</span></span>
         </div>
       </div>
 
@@ -975,6 +1121,81 @@ footer.site-footer{
       ※受講料の入金確認をもって申込成立となります。<br>
       ※受講者都合による返金はいたしかねます。
     </p>
+  </div>
+</section>
+
+<!-- ====================================================
+     チーム講習（チーム単位の出張講習）
+     編集ポイント：
+     - PLAN A／PLAN B の見出し・説明
+     - 「チーム講習について問い合わせる」ボタンの mailto URL（subject パラメータで件名固定）
+     ==================================================== -->
+<section class="team-training" id="team">
+  <div class="container">
+    <p class="eyebrow center">For Teams</p>
+    <h2 class="section-title">チーム単位の出張講習</h2>
+    <p class="section-lead">
+      指導者数名でのご受講をご検討のチームへ。<br>
+      協会代表理事 中村祐介が貴チームの練習会場まで出向き、<br>
+      講義と認定試験を一日で完結する出張型のプログラムをご用意しています。
+    </p>
+
+    <div class="team-grid">
+      <!-- PLAN A：合同講習 -->
+      <div class="team-card">
+        <div class="team-level">PLAN A</div>
+        <h3>エリア合同講習</h3>
+        <p class="team-desc">
+          複数チーム合同で開催する主軸プラン。1チームあたりの負担を抑えながら、地域単位で資格制度を広めることを目的としています。
+        </p>
+        <ul class="team-meta">
+          <li>催行人数：10〜15名</li>
+          <li>1日完結（午前=講義／午後=認定試験）</li>
+          <li>会場提供チームには特典あり</li>
+          <li>地域単位で複数チームをご案内</li>
+        </ul>
+      </div>
+
+      <!-- PLAN B：単独講習 -->
+      <div class="team-card">
+        <div class="team-level">PLAN B</div>
+        <h3>単独チーム講習</h3>
+        <p class="team-desc">
+          1チーム単独での開催をご希望のチーム向け。少人数からでも対応可能なオプションプランです。
+        </p>
+        <ul class="team-meta">
+          <li>最低3名から催行</li>
+          <li>1日完結</li>
+          <li>日程・会場は貴チームのご希望に合わせ調整</li>
+          <li>合同講習と比較し基本料あり</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="team-features">
+      <div class="team-feature">
+        <strong>同等の資格価値</strong>
+        個人受験と同じ問題・採点基準で実施。チーム講習でも資格の重みは変わりません。
+      </div>
+      <div class="team-feature">
+        <strong>協会主導の運営</strong>
+        集客・会場手配・当日進行はすべて協会が一貫対応。チーム側のご負担を最小限に。
+      </div>
+      <div class="team-feature">
+        <strong>柔軟なご相談</strong>
+        日程・人数・場所はお気軽にご相談ください。試験運用期間中は柔軟に対応いたします。
+      </div>
+    </div>
+
+    <div class="team-cta">
+      <p class="team-cta-lead">
+        ※ 2026年度は試験運用期間です。料金体系・日程の詳細は、ご相談時に個別にご案内いたします。<br>
+        ※ チーム講習でも資格は個人受験と同じ「チアタンブリング指導ライセンス 2級」が交付されます。
+      </p>
+      <a class="btn-primary" href="mailto:cheer.tumbling.association@gmail.com?subject=%E3%80%90%E3%83%81%E3%83%BC%E3%83%A0%E8%AC%9B%E7%BF%92%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B&body=%E3%81%94%E6%89%80%E5%B1%9E%E3%83%81%E3%83%BC%E3%83%A0%E5%90%8D%EF%BC%9A%0A%E3%81%94%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%EF%BC%9A%0A%E5%B8%8C%E6%9C%9B%E5%8F%97%E8%AC%9B%E5%93%A1%E6%95%B0%EF%BC%9A%0A%E6%8F%90%E6%A1%88%E4%BC%9A%E5%A0%B4%E3%83%BB%E5%9C%B0%E5%9F%9F%EF%BC%9A%0A%E5%B8%8C%E6%9C%9B%E6%99%82%E6%9C%9F%EF%BC%9A%0A%E3%81%94%E8%B3%AA%E5%95%8F%E3%83%BB%E3%81%94%E8%A6%81%E6%9C%9B%EF%BC%9A%0A%0A%E2%80%BB%E5%8D%94%E4%BC%9A%E3%81%8B%E3%82%89%E6%95%B0%E6%97%A5%E4%BB%A5%E5%86%85%E3%81%AB%E6%8B%85%E5%BD%93%E3%82%88%E3%82%8A%E3%81%94%E9%80%A3%E7%B5%A1%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82">
+        チーム講習について問い合わせる
+      </a>
+    </div>
   </div>
 </section>
 
@@ -1008,6 +1229,18 @@ footer.site-footer{
       <details class="faq-item">
         <summary>1級は誰でも受けられますか？</summary>
         <div class="answer">1級は2級取得者のみ受講可能です。</div>
+      </details>
+      <details class="faq-item">
+        <summary>チーム単位で受講することはできますか？</summary>
+        <div class="answer">はい、チーム単位での出張講習も承っております。複数チーム合同で開催する「エリア合同講習」と、1チーム単独で開催する「単独チーム講習」の2モデルをご用意しています。詳細は<a href="#team">チーム講習セクション</a>をご覧いただくか、<a href="mailto:cheer.tumbling.association@gmail.com?subject=%E3%80%90%E3%83%81%E3%83%BC%E3%83%A0%E8%AC%9B%E7%BF%92%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">協会メール</a>までご相談ください。</div>
+      </details>
+      <details class="faq-item">
+        <summary>チーム講習で取得した資格は、個人受験と同じものですか？</summary>
+        <div class="answer">はい、同一の資格です。試験問題・採点基準は個人受験と完全に同一で、交付される認定証も同じ「チアタンブリング指導ライセンス 2級」となります。チーム講習でも資格の重みは変わりません。</div>
+      </details>
+      <details class="faq-item">
+        <summary>チーム講習の料金はいくらですか？</summary>
+        <div class="answer">2026年度は試験運用期間として、料金体系の詳細はご相談時に個別にご案内しております。受講料は個人受験と同等（29,700円／名）をベースに、開催形態・地域・人数によって調整いたします。まずはお気軽にお問い合わせください。</div>
       </details>
     </div>
   </div>
@@ -1069,6 +1302,7 @@ footer.site-footer{
       <a href="#career">取得メリット</a>
       <a href="#flow">受講の流れ</a>
       <a href="#pricing">受講料</a>
+      <a href="#team">チーム講習</a>
       <a href="#faq">よくある質問</a>
     </div>
     <div class="footer-col">

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>指導ライセンス受験開始 — Story 1080×1920</title>
+<style>
+  :root {
+    --navy: #0a2647;
+    --navy-deep: #061a36;
+    --gold: #c9a247;
+    --gold-light: #e7c97a;
+    --crimson: #b91c1c;
+    --cream: #f6f1e6;
+    --paper: #fbf9f4;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --line: #d8cfb8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; }
+  body {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+    color: var(--ink);
+    background: linear-gradient(180deg,
+      var(--navy-deep) 0%,
+      var(--navy) 26%,
+      var(--navy) 36%,
+      var(--cream) 40%,
+      var(--paper) 100%);
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+  .canvas {
+    width: 1080px; height: 1920px;
+    padding: 80px 80px 70px;
+    position: relative;
+    display: flex; flex-direction: column;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center; gap: 12px;
+    background: rgba(255,255,255,0.06);
+    color: var(--gold-light);
+    padding: 13px 28px;
+    border-radius: 100px;
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    align-self: center;
+    border: 1.5px solid var(--gold);
+  }
+  .eyebrow .mark {
+    width: 22px; height: 22px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 900;
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .hero {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .hero .eng {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    color: var(--gold);
+    letter-spacing: 12px;
+    text-indent: 12px;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-size: 130px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  }
+  .hero h1 .gold-accent {
+    color: var(--gold);
+  }
+  .hero .gold-rule {
+    width: 120px;
+    height: 2px;
+    background: var(--gold);
+    margin: 28px auto 22px;
+  }
+  .hero .sub {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 26px;
+    color: rgba(255,255,255,0.92);
+    font-weight: 600;
+    line-height: 1.65;
+  }
+
+  /* Three cards vertical */
+  .three {
+    margin-top: 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    flex: 1;
+  }
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--gold);
+    padding: 22px 26px;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    align-items: center;
+    box-shadow: 0 14px 30px rgba(10,38,71,0.18);
+    position: relative;
+  }
+  .card .tag {
+    position: absolute;
+    top: -14px;
+    left: 24px;
+    background: var(--navy);
+    color: var(--gold);
+    padding: 5px 16px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    border: 1px solid var(--gold);
+  }
+  .card .visual {
+    display: grid;
+    place-items: center;
+  }
+  .card .visual img {
+    max-width: 100%;
+    max-height: 170px;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 16px rgba(10,38,71,0.25));
+  }
+  .card .body {
+    text-align: left;
+  }
+  .card .title {
+    font-family: "Hiragino Mincho ProN", serif;
+    font-size: 30px;
+    color: var(--navy);
+    font-weight: 900;
+    margin-bottom: 10px;
+    letter-spacing: 0.04em;
+  }
+  .card .desc {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 17px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    font-weight: 600;
+  }
+
+  /* Real book mini cover */
+  .mini-book-real {
+    width: 140px;
+    position: relative;
+    transform: rotate(-3deg);
+    box-shadow:
+      -4px 0 0 var(--gold),
+      -5px 0 0 var(--navy-deep),
+      10px 14px 24px rgba(10,38,71,0.4);
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+  .mini-book-real img {
+    display: block;
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 28px;
+    background: var(--navy);
+    color: white;
+    padding: 28px 32px;
+    text-align: center;
+    border: 1px solid var(--gold);
+  }
+  .footer .row {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 6px;
+  }
+  .footer .year {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 70px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .footer .label {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 0.08em;
+  }
+  .footer .by {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 12px;
+    color: var(--gold-light);
+    letter-spacing: 0.1em;
+    margin-top: 14px;
+  }
+  .footer .who {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight: 900;
+    margin-top: 4px;
+  }
+  .footer .cta {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 14px 36px;
+    margin-top: 18px;
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 19px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    border-radius: 100px;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <div class="eyebrow">
+    <span class="mark">C</span>
+    一般社団法人 チアタンブリング協会 公式
+  </div>
+
+  <div class="hero">
+    <div class="eng">LICENSE OPEN</div>
+    <h1>指導に、<br><span class="gold-accent">認定</span>を。</h1>
+    <div class="gold-rule"></div>
+    <div class="sub">チアタンブリング指導ライセンス<br>1級・2級、2027年 受付開始。</div>
+  </div>
+
+  <div class="three">
+    <div class="card">
+      <div class="tag">SEAL</div>
+      <div class="visual">
+        <img src="cta-mark-level2.png" alt="Certification Mark">
+      </div>
+      <div class="body">
+        <div class="title">認定マーク</div>
+        <div class="desc">合格者に公式マークを発行。<br>指導現場での信頼の証になります。</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">PAMPHLET</div>
+      <div class="visual">
+        <img src="pdf_extract/pamphlet_cover.png" alt="License Pamphlet">
+      </div>
+      <div class="body">
+        <div class="title">公式パンフレット</div>
+        <div class="desc">2級は「止める判断」、<br>1級は「進める判断」。<br>カリキュラムと試験要項を一冊に。</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">TEXTBOOK</div>
+      <div class="visual">
+        <div class="mini-book-real">
+          <img src="pdf_extract/textbook_cover.png" alt="2級教本 第1巻">
+        </div>
+      </div>
+      <div class="body">
+        <div class="title">公式教本</div>
+        <div class="desc">2級 第1巻 完成。<br>1級教本は順次刊行。<br>協会監修・全カラー印刷。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="row">
+      <div class="year">2027</div>
+      <div class="label">受付開始</div>
+    </div>
+    <div class="by">SUPERVISED BY</div>
+    <div class="who">一般社団法人 チアタンブリング協会</div>
+    <br>
+    <div class="cta">詳細はプロフィールから →</div>
+  </div>
+
+</div>
+</body>
+</html>
