@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>講習会レポート Slide 5 — CTA Team（第2回）</title>
+<style>
+  :root {
+    --blue-bright: #3B82F6;
+    --blue-pop: #60A5FA;
+    --blue-mid: #2563EB;
+    --blue-deep: #1E3A8A;
+    --blue-darkest: #0F1E4D;
+    --cyan: #06B6D4;
+    --cyan-light: #67E8F9;
+    --pink: #EC4899;
+    --pink-light: #F472B6;
+    --cream: #F0F9FF;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1350px; overflow: hidden; }
+  body {
+    font-family: "Hiragino Mincho ProN", serif;
+    color: white;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(59,130,246,0.35) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 35% at 50% 100%, rgba(6,182,212,0.22) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 60% at 50% 50%, var(--blue-deep) 0%, var(--blue-darkest) 80%);
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    top: -100px; left: 50%;
+    transform: translateX(-50%);
+    width: 1500px; height: 1500px;
+    background:
+      conic-gradient(from 90deg at 50% 50%,
+        transparent 0deg, rgba(96,165,250,0.06) 10deg, transparent 20deg,
+        transparent 35deg, rgba(103,232,249,0.06) 45deg, transparent 55deg,
+        transparent 70deg, rgba(96,165,250,0.06) 80deg, transparent 90deg);
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  .canvas {
+    width: 1080px; height: 1350px;
+    padding: 80px 90px;
+    position: relative;
+    display: flex; flex-direction: column;
+    z-index: 1;
+  }
+  .frame {
+    position: absolute;
+    top: 35px; left: 35px; right: 35px; bottom: 35px;
+    border: 1px solid rgba(96,165,250,0.4);
+    pointer-events: none;
+  }
+  .frame::before, .frame::after {
+    content: "";
+    position: absolute;
+    width: 55px; height: 55px;
+    border: 2px solid var(--blue-pop);
+  }
+  .frame::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+  .frame::after  { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center; gap: 12px;
+    background: rgba(255,255,255,0.04);
+    color: white;
+    padding: 11px 22px;
+    border-radius: 100px;
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    border: 1.5px solid var(--blue-pop);
+  }
+  .eyebrow .mark {
+    width: 20px; height: 20px;
+    background: var(--pink);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 10px;
+    font-weight: 900;
+    font-family: "Cormorant Garamond", serif;
+  }
+  .page-num {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    color: var(--cyan-light);
+    font-style: italic;
+    letter-spacing: 4px;
+    border: 1px solid var(--blue-pop);
+    padding: 8px 18px;
+    border-radius: 100px;
+  }
+
+  .hero {
+    margin-top: 60px;
+    text-align: center;
+  }
+  .hero .eng {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    color: var(--cyan-light);
+    letter-spacing: 10px;
+    text-indent: 10px;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-size: 66px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: -0.01em;
+    line-height: 1.18;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  }
+  .hero h1 .accent { color: var(--cyan-light); }
+  .gold-rule {
+    width: 110px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--cyan), var(--blue-pop));
+    margin: 28px auto 22px;
+    position: relative;
+  }
+  .gold-rule::before, .gold-rule::after {
+    content: "";
+    position: absolute;
+    width: 7px; height: 7px;
+    background: var(--cyan-light);
+    border-radius: 50%;
+    top: -2.5px;
+  }
+  .gold-rule::before { left: -18px; }
+  .gold-rule::after  { right: -18px; }
+  .hero .sub {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 22px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 600;
+    line-height: 1.7;
+  }
+
+  .features {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+  }
+  .feature {
+    background: rgba(15,30,77,0.5);
+    border: 1px solid rgba(96,165,250,0.5);
+    padding: 26px 18px 24px;
+    text-align: center;
+  }
+  .feature .icon-wrap {
+    width: 56px; height: 56px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    border: 1.5px solid var(--cyan-light);
+    display: grid;
+    place-items: center;
+    color: var(--cyan-light);
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .feature .label {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: var(--cyan-light);
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+  .feature .value {
+    font-family: "Hiragino Mincho ProN", serif;
+    font-size: 19px;
+    font-weight: 800;
+    color: white;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .feature .desc {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.55;
+  }
+
+  .cta-box {
+    margin-top: 36px;
+    background: linear-gradient(135deg, rgba(6,182,212,0.22) 0%, rgba(59,130,246,0.10) 100%);
+    border: 1.5px solid var(--cyan);
+    padding: 30px 38px;
+    text-align: center;
+    position: relative;
+  }
+  .cta-box::before, .cta-box::after {
+    content: "";
+    position: absolute;
+    width: 14px; height: 14px;
+    background: var(--cyan-light);
+    border-radius: 50%;
+  }
+  .cta-box::before { top: -7px; left: -7px; }
+  .cta-box::after { bottom: -7px; right: -7px; }
+  .cta-box .label {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+    letter-spacing: 6px;
+    color: var(--cyan-light);
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+  .cta-box .main {
+    font-family: "Hiragino Mincho ProN", serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  .cta-box .main .accent { color: var(--cyan-light); }
+  .cta-box .how {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 16px;
+    color: rgba(255,255,255,0.9);
+    font-weight: 600;
+    line-height: 1.55;
+  }
+  .cta-box .how strong { color: var(--cyan-light); }
+
+  .footer {
+    margin-top: auto;
+    border-top: 1px solid rgba(96,165,250,0.4);
+    padding-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer .who {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+  .footer .hashtag {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 13px;
+    color: var(--cyan-light);
+    letter-spacing: 3px;
+    font-style: italic;
+  }
+
+  .stamp {
+    position: absolute;
+    top: 64px;
+    right: 70px;
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, var(--pink-light) 0%, var(--pink) 60%, #be185d 100%);
+    color: white;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    transform: rotate(8deg);
+    box-shadow:
+      0 0 0 4px var(--blue-darkest),
+      0 0 0 7px var(--pink),
+      0 14px 32px rgba(0,0,0,0.5);
+    z-index: 30;
+    padding: 10px;
+  }
+  .stamp .top {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-indent: 4px;
+  }
+  .stamp .big {
+    font-family: "Hiragino Mincho ProN", serif;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1;
+    margin: 4px 0 4px;
+    letter-spacing: -1px;
+  }
+  .stamp .bot {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 1.3;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="frame"></div>
+
+  <div class="top-bar">
+    <div class="eyebrow">
+      <span class="mark">C</span>
+      一般社団法人 チアタンブリング協会 公式
+    </div>
+    <div class="page-num">05 / 05</div>
+  </div>
+
+  <div class="stamp">
+    <div>
+      <div class="top">★ OPEN ★</div>
+      <div class="big">受付中</div>
+      <div class="bot">チーム<br>講習依頼</div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="eng">FOR YOUR TEAM</div>
+    <h1>次は、あなたの<br><span class="accent">チーム</span>で。</h1>
+    <div class="gold-rule"></div>
+    <div class="sub">チーム単位の出張講習を、<br>随時お受けしています。</div>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <div class="icon-wrap">P</div>
+      <div class="label">PLACE</div>
+      <div class="value">会場は<br>貴チームへ</div>
+      <div class="desc">普段の練習場所に<br>講師が出向きます</div>
+    </div>
+    <div class="feature">
+      <div class="icon-wrap">D</div>
+      <div class="label">DATE</div>
+      <div class="value">日程は<br>応相談</div>
+      <div class="desc">スケジュールに<br>合わせて調整します</div>
+    </div>
+    <div class="feature">
+      <div class="icon-wrap">N</div>
+      <div class="label">NUMBER</div>
+      <div class="value">少人数<br>から可能</div>
+      <div class="desc">指導者数名から<br>受付いたします</div>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <div class="label">HOW  TO  APPLY</div>
+    <div class="main">お問い合わせは<br><span class="accent">プロフィールのリンク</span>から</div>
+    <div class="how">または DM・公式メールにて<br>「<strong>チーム講習</strong>」とご連絡ください</div>
+  </div>
+
+  <div class="footer">
+    <div class="who">一般社団法人 チアタンブリング協会</div>
+    <div class="hashtag">#CTA  #指導者講習  #チーム講習</div>
+  </div>
+</div>
+</body>
+</html>

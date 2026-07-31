@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>講習会レポート Slide 4 — Exam（第2回）</title>
+<style>
+  :root {
+    --blue-bright: #3B82F6;
+    --blue-pop: #60A5FA;
+    --blue-mid: #2563EB;
+    --blue-deep: #1E3A8A;
+    --blue-darkest: #0F1E4D;
+    --cyan: #06B6D4;
+    --cyan-light: #67E8F9;
+    --pink: #EC4899;
+    --cream: #F0F9FF;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1350px; overflow: hidden; }
+  body {
+    font-family: "Hiragino Mincho ProN", serif;
+    background: var(--blue-darkest);
+    color: white;
+    -webkit-font-smoothing: antialiased;
+  }
+  .canvas { width: 1080px; height: 1350px; position: relative; }
+
+  .photo-area {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 820px;
+    overflow: hidden;
+  }
+  .photo-area img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    filter: brightness(1.15) contrast(1.03) saturate(1.08);
+  }
+  .photo-area::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, transparent 0%, transparent 55%, rgba(15,30,77,0.6) 78%, rgba(15,30,77,0.98) 100%);
+  }
+
+  .frame {
+    position: absolute;
+    top: 35px; left: 35px; right: 35px; bottom: 35px;
+    border: 1px solid rgba(96,165,250,0.45);
+    pointer-events: none;
+    z-index: 10;
+  }
+  .frame::before, .frame::after {
+    content: "";
+    position: absolute;
+    width: 55px; height: 55px;
+    border: 2px solid var(--blue-pop);
+  }
+  .frame::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+  .frame::after  { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+
+  .top-bar {
+    position: absolute;
+    top: 70px; left: 90px; right: 90px;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center; gap: 12px;
+    background: rgba(15,30,77,0.78);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 11px 22px;
+    border-radius: 100px;
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    border: 1.5px solid var(--blue-pop);
+  }
+  .eyebrow .mark {
+    width: 20px; height: 20px;
+    background: var(--pink);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 10px;
+    font-weight: 900;
+    font-family: "Cormorant Garamond", serif;
+  }
+  .page-num {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    color: var(--cyan-light);
+    font-style: italic;
+    letter-spacing: 4px;
+    background: rgba(15,30,77,0.78);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--blue-pop);
+    padding: 8px 18px;
+    border-radius: 100px;
+  }
+
+  .content {
+    position: absolute;
+    left: 90px; right: 90px;
+    bottom: 95px;
+    z-index: 20;
+  }
+  .section-label {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    letter-spacing: 12px;
+    text-indent: 12px;
+    color: var(--cyan-light);
+    font-style: italic;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .section-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--cyan), transparent);
+    max-width: 200px;
+  }
+  .section-num {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 14px;
+    color: var(--cream);
+    letter-spacing: 2px;
+  }
+  h1 {
+    font-size: 58px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: -0.01em;
+    line-height: 1.18;
+    margin-bottom: 22px;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  }
+  h1 .accent { color: var(--cyan-light); }
+  .gold-rule {
+    width: 70px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--cyan), var(--blue-pop));
+    margin: 0 0 22px;
+  }
+  .body-text {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 22px;
+    color: rgba(255,255,255,0.9);
+    font-weight: 500;
+    line-height: 1.75;
+  }
+
+  .footer {
+    position: absolute;
+    left: 90px; right: 90px;
+    bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+    border-top: 1px solid rgba(96,165,250,0.4);
+    padding-top: 14px;
+  }
+  .footer .who {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+  .footer .hashtag {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 13px;
+    color: var(--cyan-light);
+    letter-spacing: 3px;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="photo-area">
+    <img src="exam.jpg" alt="2級認定試験">
+  </div>
+
+  <div class="frame"></div>
+
+  <div class="top-bar">
+    <div class="eyebrow">
+      <span class="mark">C</span>
+      第2回 指導者講習会レポート
+    </div>
+    <div class="page-num">04 / 05</div>
+  </div>
+
+  <div class="content">
+    <div class="section-label">
+      <span>EXAMINATION</span>
+      <span class="section-num">2級 認定試験</span>
+    </div>
+    <h1>学び、討議、<br>そして<span class="accent">試験</span>へ。</h1>
+    <div class="gold-rule"></div>
+    <div class="body-text">
+      1日の締めくくりに、2級認定試験を実施。<br>
+      合否結果は後日、受験者のみなさまへ<br>
+      個別にご通知いたします。
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="who">一般社団法人 チアタンブリング協会</div>
+    <div class="hashtag">#CTA  #指導者講習  #認定試験</div>
+  </div>
+</div>
+</body>
+</html>
