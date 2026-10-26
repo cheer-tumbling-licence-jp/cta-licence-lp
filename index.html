@@ -883,6 +883,30 @@ footer.site-footer{
   .floating-cta{display:block}
   body{padding-bottom:80px} /* 浮遊ボタン分の余白 */
 }
+
+/* ===== 2027年度 刷新で追加 ===== */
+.lp-note{max-width:900px;margin:40px auto 0;background:#f6f8fc;border:1px solid #dde4ee;border-radius:14px;padding:28px 32px}
+.lp-note h4{font-size:16px;font-weight:800;color:#0a2647;margin:0 0 14px;letter-spacing:.04em}
+.lp-note ul{margin:0;padding-left:1.2em}
+.lp-note li{font-size:14.5px;line-height:1.95;color:#2d3748}
+.lp-highlight{margin-top:16px;padding:14px 16px;background:#fff;border-left:4px solid var(--gold);font-size:14.5px;line-height:1.9;color:#0a2647;font-weight:600}
+.lp-small{font-size:12.5px;line-height:1.85;color:#6b7280;margin-top:14px}
+.lp-dates{width:100%;border-collapse:collapse;margin-top:6px;background:#fff}
+.lp-dates th,.lp-dates td{border:1px solid #dde4ee;padding:9px 12px;text-align:center;font-size:14px}
+.lp-dates thead th{background:#0a2647;color:#fff;font-weight:700;letter-spacing:.06em}
+.lp-dates tbody tr:nth-child(even){background:#f8fafc}
+.grades{padding:96px 0;background:#fff}
+.lp-boundary{max-width:900px;margin:0 auto 34px;background:linear-gradient(160deg,#0a2647,#123a6b);
+  border-radius:16px;padding:34px 38px;color:#fff;box-shadow:0 14px 40px rgba(6,26,54,.22)}
+.lp-boundary-kick{font-size:11px;letter-spacing:.34em;color:var(--gold);margin:0 0 12px}
+.lp-boundary-main{font-size:clamp(16px,2.2vw,20px);line-height:1.95;font-weight:700;margin:0}
+.lp-compare{width:100%;max-width:900px;margin:0 auto;border-collapse:collapse;background:#fff}
+.lp-compare th,.lp-compare td{border:1px solid #dde4ee;padding:12px 14px;font-size:14px;text-align:left}
+.lp-compare thead th{background:#0a2647;color:#fff;text-align:center;font-weight:700}
+.lp-compare tbody th{background:#f6f8fc;color:#0a2647;width:110px;font-weight:700}
+.lp-compare + .lp-small{max-width:900px;margin:16px auto 0}
+@media(max-width:720px){.lp-note{padding:22px 18px}.lp-boundary{padding:24px 20px}
+  .lp-compare th,.lp-compare td,.lp-dates th,.lp-dates td{padding:8px;font-size:12.5px}}
 </style>
 </head>
 
@@ -892,11 +916,11 @@ footer.site-footer{
      上部告知バー（チーム講習 受付窓口）
      画面最上部に常時表示・sticky。スマホでは折返し対応。
      ==================================================== -->
-<a class="team-notice-bar" href="https://cheer-tumbling.jp/seminar-2026-4th-kanto.html" target="_blank" rel="noopener">
+<a class="team-notice-bar" href="#flow">
   <span class="new-badge">NEW</span>
-  <span class="label">第4回 2級講習会・関東</span>
+  <span class="label">2027年度 受付中</span>
   <span class="dot">·</span>
-  <span class="text">開催延期 — あらためて日程を調整しています</span>
+  <span class="text">3級（安全基礎）を新設／対面8日程・申込は通年</span>
   <span class="arrow">→</span>
 </a>
 
@@ -948,12 +972,13 @@ footer.site-footer{
         チアリーディング／チアダンス／体操・アクロバット教室の指導者のための、CTA公式指導者認定資格です。
       </p>
       <div class="hero-meta">
-        <span>2027年度 受験受講生 募集中</span>
-        <span>9月／認定試験実施</span>
+        <span>2027（令和9）年度　申込受付は通年</span>
+        <span>3級（安全基礎）を新設</span>
+        <span>2級・1級は対面必須</span>
       </div>
       <div class="hero-cta">
-        <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfAtOFAHIQDMZSkB4A6HzMgBNesmZ02pn6UELIn9Zd6jtJebg/viewform?usp=header" target="_blank" rel="noopener">受講を申し込む</a>
-        <a class="btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSd_By9XU-ZyOG4cfNkAzY-6F7KR6ekxFtaTGVy1Fl9T35EMHw/viewform?usp=header" target="_blank" rel="noopener">資料請求（無料）</a>
+        <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfAtOFAHIQDMZSkB4A6HzMgBNesmZ02pn6UELIn9Zd6jtJebg/viewform" target="_blank" rel="noopener">受講を申し込む</a>
+        <a class="btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSd_By9XU-ZyOG4cfNkAzY-6F7KR6ekxFtaTGVy1Fl9T35EMHw/viewform" target="_blank" rel="noopener">資料請求（無料）</a>
       </div>
     </div>
     <div class="hero-mark">
@@ -1029,6 +1054,31 @@ footer.site-footer{
     </div>
   </div>
 </section>
+<!-- ====================================================
+     3つの級と、できること（2027年度 新設）
+     ==================================================== -->
+<section class="grades" id="grades">
+  <div class="container">
+    <p class="eyebrow center">Three Classes</p>
+    <h2 class="section-title">級ごとに、できることが決まっています</h2>
+    <div class="lp-boundary">
+      <p class="lp-boundary-kick">CLASS 3 — FOUNDATION</p>
+      <p class="lp-boundary-main">3級は、自分のチームの練習を「安全な状態かどうか」判断するための級です。選手の身体に触れる補助、および技の技術指導は2級から行えます。</p>
+    </div>
+    <table class="lp-compare">
+      <thead><tr><th></th><th>3級</th><th>2級</th><th>1級</th></tr></thead>
+      <tbody>
+        <tr><th>到達点</th><td>見て判断できる</td><td>教えられる・直せる</td><td>なぜそうなるか説明できる</td></tr>
+        <tr><th>技の話</th><td>どこが危ないかまで</td><td>どう教え、どう直すか</td><td>物理的根拠から設計する</td></tr>
+        <tr><th>身体接触</th><td>扱いません</td><td>対面の実技で扱います</td><td>同左</td></tr>
+        <tr><th>形式</th><td>オンデマンドのみ</td><td>事前オンデマンド＋対面</td><td>対面・更新制</td></tr>
+        <tr><th>発行</th><td>修了証</td><td>認定</td><td>認定</td></tr>
+      </tbody>
+    </table>
+    <p class="lp-small center">3級は「2級の前段」ではありません。<b>アシスタントコーチ・高校生・選手ご本人・保護者の方など、指導者でない方にも同じ安全基準を持っていただく</b>ための級です。</p>
+  </div>
+</section>
+
 
 <!-- ====================================================
      キャリア（資格取得で広がる4つの可能性）
@@ -1080,59 +1130,71 @@ footer.site-footer{
 <section class="flow" id="flow">
   <div class="container">
     <p class="eyebrow center">Flow</p>
-    <h2 class="section-title">受講受験の流れ</h2>
-    <p class="section-lead center" style="margin-bottom:0">2027年度（令和9年度）スケジュール</p>
+    <h2 class="section-title">受講の流れ</h2>
+    <p class="section-lead center">2027（令和9）年度　2級・1級共通。<b>会場にお越しいただくのは1日だけです。</b></p>
 
     <div class="flow-steps">
       <div class="flow-step">
-        <div class="step-date"><small>STEP 01</small>2/1〜4/15</div>
+        <div class="step-date"><small>STEP 01</small>通年</div>
         <div class="step-body">
-          <h3>申込・受講受験料のお支払い</h3>
-          <p>申込フォーム（Googleフォーム）よりお申込みください。受講料の入金確認をもって正式申込成立となります。</p>
+          <h3>受講申込</h3>
+          <p>受付は通年です。8日程から受講する1回をお選びください。締切は、選んだ回の開催3週間前です。　<b>お支払いはクレジットカード（Stripe）</b></p>
         </div>
       </div>
       <div class="flow-step">
         <div class="step-date"><small>STEP 02</small>3週間以内</div>
         <div class="step-body">
-          <h3>教本などをお届け</h3>
-          <p>申込書の受領と受講受験料のご納入を確認後、3週間以内に教材を発送いたします。</p>
+          <h3>教本と事前オンデマンドをお届け</h3>
+          <p>入金の確認後、3週間以内にお届けします。教本は現場に持ち帰る指導書として、受講後もお使いいただけます。</p>
         </div>
       </div>
       <div class="flow-step">
-        <div class="step-date"><small>STEP 03</small>〜7/31</div>
+        <div class="step-date"><small>STEP 03</small>当日</div>
         <div class="step-body">
-          <h3>課題報告問題の提出</h3>
-          <p>問題を解いたあと、解答用紙のみを返信用封筒にてご提出ください。※本試験ではありません。</p>
+          <h3>対面講習（約8時間）＋ 当日に認定試験</h3>
+          <p>プロコーチ2名・定員12名。実演と補助法、その場での質疑に時間を使います。試験は同じ日に行いますので、会場に来るのは1日だけです。　<b>オンラインだけでは取得できません</b></p>
         </div>
       </div>
       <div class="flow-step">
-        <div class="step-date"><small>STEP 04</small>9/12（日）</div>
-        <div class="step-body">
-          <h3>認定試験</h3>
-          <p>課題報告問題解答用紙の提出を修了した受講生を対象に、認定試験を実施します。</p>
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="step-date"><small>STEP 05</small>10月中旬</div>
+        <div class="step-date"><small>STEP 04</small>約1か月後</div>
         <div class="step-body">
           <h3>合否の発表</h3>
-          <p>合否については、本協会において決定し、結果を通知いたします。</p>
+          <p>受講の約1か月後に通知します。</p>
         </div>
       </div>
       <div class="flow-step">
-        <div class="step-date"><small>STEP 06</small>11月上旬まで</div>
+        <div class="step-date"><small>STEP 05</small>合格後</div>
         <div class="step-body">
           <h3>認定登録料のお支払い</h3>
-          <p>合格者は支払い期限までに認定登録料をご納入ください。</p>
+          <p>合格された方は、認定登録料3,300円（税込）をお納めください。</p>
         </div>
       </div>
       <div class="flow-step">
-        <div class="step-date"><small>STEP 07</small>11月下旬以降</div>
+        <div class="step-date"><small>STEP 06</small>発行</div>
         <div class="step-body">
-          <h3>資格認定証等の送付</h3>
-          <p>認定登録手続きを行なった受講者には「資格認定証」と各級の「資格表示バッジ」が送付されます。</p>
+          <h3>認定証・資格表示バッジの送付</h3>
+          <p>認定登録の手続きを行なった方にお送りします。</p>
         </div>
       </div>
+    </div>
+
+    <div class="lp-note">
+      <h4>2027（令和9）年度 対面講習の日程（すべて日曜）</h4>
+      <table class="lp-dates">
+        <thead><tr><th>回</th><th>開催日</th><th>申込締切</th></tr></thead>
+        <tbody>
+          <tr><td>第1回</td><td><b>4月11日（日）</b></td><td>3/21</td></tr>
+          <tr><td>第2回</td><td><b>4月25日（日）</b></td><td>4/4</td></tr>
+          <tr><td>第3回</td><td><b>5月16日（日）</b></td><td>4/25</td></tr>
+          <tr><td>第4回</td><td><b>5月30日（日）</b></td><td>5/9</td></tr>
+          <tr><td>第5回</td><td><b>6月6日（日）</b></td><td>5/16</td></tr>
+          <tr><td>第6回</td><td><b>8月8日（日）</b></td><td>7/18</td></tr>
+          <tr><td>第7回</td><td><b>9月12日（日）</b></td><td>8/22</td></tr>
+          <tr><td>第8回</td><td><b>9月26日（日）</b></td><td>9/5</td></tr>
+        </tbody>
+      </table>
+      <p class="lp-small">※ 受付は通年です。8日程から受講する1回をお選びください。締切は開催の3週間前です。<br>
+      ※ プロコーチ2名・定員12名・所要約8時間。<b>認定試験は当日に行います。</b></p>
     </div>
   </div>
 </section>
@@ -1145,66 +1207,55 @@ footer.site-footer{
   <div class="container">
     <p class="eyebrow center">Pricing</p>
     <h2 class="section-title">受講料・受講資格</h2>
+    <p class="section-lead center">3つの級は「難易度」ではなく「役割」が違います。</p>
 
     <div class="price-grid">
-      <!-- 2級 -->
+      <div class="price-card">
+        <div class="level">LEVEL 3</div>
+        <h3>3級（安全基礎）</h3>
+        <div class="amount">3,300<small>円（税込）</small></div>
+        <p class="note">見て判断できる</p>
+        <ul class="includes"><li>練習が安全な状態かどうか判断できる</li><li>危ないサインに気づける</li><li>やってはいけない補助を見分けて止められる</li></ul>
+        <div class="req">
+          <strong>受講資格</strong>
+          <span class="req-value">15歳以上（高校生を含む）／どなたでも受講できます</span>
+        </div>
+      </div>
       <div class="price-card featured">
         <div class="level">LEVEL 2</div>
         <h3>2級（基礎）</h3>
         <div class="amount">29,700<small>円（税込）</small></div>
-        <p class="note">初めてお申し込みの方</p>
-        <ul class="includes">
-          <li>教材一式</li>
-          <li>課題報告問題採点料</li>
-          <li>技術講習料</li>
-          <li>受験料</li>
-        </ul>
+        <p class="note">安全に「止める」判断ができる・教えられる</p>
+        <ul class="includes"><li>基礎技を安全な順序で教えられる</li><li>技の危険性を構造から判断できる</li><li>補助の要否と外し時を判断できる</li></ul>
         <div class="req">
           <strong>受講資格</strong>
-          <span class="req-value">2027年4月1日時点で満18歳以上の方</span>
+          <span class="req-value">18歳以上／3級の取得は必要ありません</span>
         </div>
       </div>
-
-      <!-- 1級 -->
       <div class="price-card">
         <div class="level">LEVEL 1</div>
         <h3>1級（上級）</h3>
         <div class="amount">49,500<small>円（税込）</small></div>
-        <p class="note">初めてお申し込みの方</p>
-        <ul class="includes">
-          <li>教材一式</li>
-          <li>課題報告問題採点料</li>
-          <li>技術講習料</li>
-          <li>受験料</li>
-        </ul>
+        <p class="note">なぜそうなるかを説明できる</p>
+        <ul class="includes"><li>高度技を物理的根拠から指導できる</li><li>エラーの構造的原因を特定できる</li><li>選手個別に最適な指導を設計できる</li></ul>
         <div class="req">
           <strong>受講資格</strong>
-          <span class="req-value">2級チアタンブリング指導ライセンス<span class="nowrap">の認定登録者</span></span>
-        </div>
-      </div>
-
-      <!-- 更新 -->
-      <div class="price-card">
-        <div class="level">RENEWAL</div>
-        <h3>更新（1級のみ）</h3>
-        <div class="amount">11,000<small>円（税込）</small></div>
-        <p class="note">更新される方</p>
-        <ul class="includes">
-          <li>更新手続き料</li>
-          <li>配信料</li>
-        </ul>
-        <div class="req">
-          <strong>対象</strong>
-          <span class="req-value">1級認定登録者の更新手続き</span>
+          <span class="req-value">2級の認定登録者／2級の取得が必要です</span>
         </div>
       </div>
     </div>
 
-    <p class="price-disclaimer">
-      ※振込手数料は受講者様のご負担となります。<br>
-      ※受講料の入金確認をもって申込成立となります。<br>
-      ※受講者都合による返金はいたしかねます。
-    </p>
+    <div class="lp-note">
+      <h4>そのほかの費用</h4>
+      <ul>
+        <li><b>2級 認定登録料</b> 3,300円（税込）／合格者のみ。認定証と資格表示バッジをお送りします</li>
+        <li><b>2級 年会費</b> 5,500円／年（2年目から・更新制）　<b>1級 年会費</b> 11,000円／年（年次研修を含む）</li>
+        <li><b>3級 チーム一括</b> 10名以上で1名 2,200円（税込）</li>
+        <li><b>実演・補助法クリニック</b> 〜12名 55,000円／13〜20名 75,000円（定額・交通費は実費を別途）</li>
+      </ul>
+      <p class="lp-highlight">3級の受講料3,300円は、3級の修了日から1年以内に2級を受講される場合、全額を2級の受講料に充当します。他の割引との併用はできません。</p>
+      <p class="lp-small">※ お支払いはクレジットカード（Stripe）です。　※ 受講者都合による返金はいたしかねます。　※ 3級は修了証のため更新はありません。</p>
+    </div>
   </div>
 </section>
 
@@ -1217,142 +1268,41 @@ footer.site-footer{
 <section class="team-training" id="team">
   <div class="container">
     <p class="eyebrow center">For Teams</p>
-    <h2 class="section-title">チーム単位の出張講習</h2>
+    <h2 class="section-title">チーム単位で、安全な指導力を。</h2>
     <p class="section-lead">
-      指導者数名でのご受講をご検討のチームへ。<br>
-      協会代表理事 中村祐介が貴チームの練習会場まで出向き、<br>
-      講義と認定試験を一日で完結する出張型のプログラムをご用意しています。
-    </p>
-    <p class="center" style="margin:-32px 0 20px">
-      <a href="https://cheer-tumbling.jp/reports.html" target="_blank" rel="noopener"
-         style="display:inline-block;font-size:14px;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;letter-spacing:.04em">
-        ▶ 第1回 講習会の開催レポートを見る
-      </a>
+      コーチ一人ひとりの判断力を底上げし、チーム全体で基準をそろえます。<br>
+      チアリーディング／チアダンスチーム・体操教室・アクロバット教室・バク転教室の皆さまへ。
     </p>
 
-    <!-- ====== 第2回 開催告知バナー ====== -->
-    <style>
-      .lp-event{position:relative;background:linear-gradient(160deg,#0a2647 0%,#123a6b 100%);
-        border:1px solid rgba(231,201,122,.45);border-radius:16px;padding:30px 32px;margin:0 auto 44px;
-        max-width:860px;color:#fff;box-shadow:0 14px 40px rgba(6,26,54,.28)}
-      .lp-event .badge{display:inline-block;background:var(--gold);color:#0a2647;font-weight:800;
-        font-size:12px;letter-spacing:.1em;padding:5px 14px;border-radius:3px;margin-bottom:14px}
-      .lp-event h3{font-size:clamp(20px,3vw,26px);font-weight:800;line-height:1.4;margin:0 0 18px;letter-spacing:.02em}
-      .lp-event h3 .yellow{color:var(--gold-light)}
-      .lp-event .ev-meta{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}
-      .lp-event .ev-meta .m{display:flex;flex-direction:column;gap:2px;background:rgba(255,255,255,.06);
-        border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:11px 16px;min-width:120px}
-      .lp-event .ev-meta .k{font-size:10.5px;letter-spacing:.12em;color:var(--gold-light);text-transform:uppercase}
-      .lp-event .ev-meta .v{font-size:15px;font-weight:700}
-      .lp-event .ev-note{font-size:12.5px;color:rgba(255,255,255,.66);margin:-10px 0 20px}
-      .lp-event .ev-btns{display:flex;gap:12px;flex-wrap:wrap}
-      .lp-event .eb{display:inline-block;text-decoration:none;font-weight:700;font-size:14.5px;letter-spacing:.04em;
-        padding:14px 28px;border-radius:4px;transition:transform .15s,box-shadow .2s,background .2s}
-      .lp-event .eb.solid{background:var(--gold);color:#0a2647;box-shadow:0 4px 16px rgba(201,162,71,.4)}
-      .lp-event .eb.solid:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(201,162,71,.55)}
-      .lp-event .eb.ghost{background:transparent;color:#fff;border:1px solid rgba(231,201,122,.6)}
-      .lp-event .eb.ghost:hover{background:rgba(231,201,122,.12)}
-      @media(max-width:520px){.lp-event{padding:24px 20px}.lp-event .ev-btns{flex-direction:column}.lp-event .eb{text-align:center}}
-    </style>
-    <!-- ====== 第4回 2級講習会・関東 日程調整中 ====== -->
-    <div class="lp-event">
-      <span class="badge">開催延期 ・ 第4回</span>
-      <h3>第4回 2級講習会は<br><span class="yellow">あらためて日程を調整しています</span><br><span style="font-size:15px;font-weight:700;color:#fff">10/11・10/12 の開催は見送りとなりました／会場は東京・有明「チアジム東京」を予定</span></h3>
-      <div class="ev-meta">
-        <div class="m"><span class="k">Date</span><span class="v">調整中（決まり次第ご案内）</span></div>
-        <div class="m"><span class="k">Place</span><span class="v">チアジム東京（東京・有明）</span></div>
-        <div class="m"><span class="k">Content</span><span class="v">座学＋実技＋認定試験</span></div>
-        <div class="m"><span class="k">Fee</span><span class="v">39,700円（税込）</span></div>
-        <div class="m"><span class="k">Status</span><span class="v">10/11・10/12 は見送り</span></div>
+    <div class="price-grid" style="margin-bottom:32px">
+      <div class="price-card">
+        <div class="level">PLAN 1</div>
+        <h3>8日程に参加</h3>
+        <div class="amount">29,700<small>円／名（税込）</small></div>
+        <p class="note">少人数のチーム向け</p>
+        <ul class="includes"><li>チームのコーチが、年8回の対面講習から都合のよい回に参加します。少人数のチーム向け。</li></ul>
       </div>
-      <p class="ev-note">※ 参加日アンケートの集計の結果、10月11日・10月12日ともに最少催行人数の5名に届かなかったため、今回の開催は見送りとなりました。ご回答いただいた先生方に受講料のお支払いは発生いたしません。会場はチアジム東京（東京都江東区有明1-5-22／ゆりかもめ「有明テニスの森」駅 徒歩10分）を予定しています。当日は 10:00〜16:00 座学講習、16:00〜16:20 グループディスカッション、16:20〜17:00 2級認定試験、17:00〜20:00 実技講習の構成です（時間は進行により前後します）。受講料は 2級講習費 29,700円＋対面講習費 10,000円＝39,700円（税込）。新しい日程が決まり次第、あらためてご案内いたします。</p>
-      <div class="ev-btns">
-        <a class="eb solid" href="https://cheer-tumbling.jp/seminar-2026-4th-kanto.html" target="_blank" rel="noopener">開催概要を見る →</a>
-        <a class="eb ghost" href="mailto:cheer.tumbling.association@gmail.com?subject=%E7%AC%AC4%E5%9B%9E2%E7%B4%9A%E8%AC%9B%E7%BF%92%E4%BC%9A%E3%81%AE%E6%AC%A1%E5%9B%9E%E6%97%A5%E7%A8%8B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">次回の案内を希望する</a>
+      <div class="price-card featured">
+        <div class="level">PLAN 2</div>
+        <h3>出張講習</h3>
+        <div class="amount">29,700<small>円／名 ＋ クリニック定額</small></div>
+        <p class="note">出張は3名から承ります</p>
+        <ul class="includes"><li>協会のコーチがチームの会場に伺い、まとめて実施します。日程はご相談のうえ決めます。</li>
+          <li>実演・補助法クリニック 〜12名 55,000円／13〜20名 75,000円</li></ul>
       </div>
     </div>
 
-    <!-- ====== 第3回 2級講習会・岐阜 開催しました ====== -->
-    <div class="lp-event">
-      <span class="badge">開催しました ・ 第3回</span>
-      <h3>第3回 2級講習会を<br><span class="yellow">8月19日（水）岐阜県関市「わかくさプラザ 福祉会館」</span>で開催しました。<br><span style="font-size:15px;font-weight:700;color:#fff">中部地区初開催／体操・アクロバット教室のコーチを含む 9名がご参加</span></h3>
-      <div class="ev-meta">
-        <div class="m"><span class="k">Date</span><span class="v">8/19（水）</span></div>
-        <div class="m"><span class="k">Place</span><span class="v">関市 わかくさプラザ 福祉会館</span></div>
-        <div class="m"><span class="k">Content</span><span class="v">講義＋討議＋認定試験</span></div>
-        <div class="m"><span class="k">Attendees</span><span class="v">9名（岐阜・名古屋）</span></div>
-      </div>
-      <p class="ev-note">※ 中部地区での初開催。体操・アクロバット教室からもコーチが参加し、競技の枠を越えた学び合いの1日となりました。合否は後日通知いたします。</p>
-      <div class="ev-btns">
-        <a class="eb solid" href="https://cheer-tumbling.jp/reports.html" target="_blank" rel="noopener">開催レポートを見る →</a>
-        <a class="eb ghost" href="mailto:cheer.tumbling.association@gmail.com?subject=%E3%80%90%E3%83%81%E3%83%BC%E3%83%A0%E8%AC%9B%E7%BF%92%E3%80%91%E6%AC%A1%E5%9B%9E%E9%96%8B%E5%82%AC%E3%83%BB%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">次回開催・チーム講習を相談する</a>
-      </div>
-    </div>
-
-    <div class="team-grid">
-      <!-- PLAN A：合同講習 -->
-      <div class="team-card">
-        <div class="team-level">PLAN A</div>
-        <h3>エリア合同講習</h3>
-        <p class="team-desc">
-          複数チーム合同で開催する主軸プラン。1チームあたりの負担を抑えながら、地域単位で資格制度を広めることを目的としています。
-        </p>
-        <ul class="team-meta">
-          <li>催行人数：10〜15名</li>
-          <li>1日完結（午前=講義／午後=認定試験）</li>
-          <li>会場提供チームには特典あり</li>
-          <li>地域単位で複数チームをご案内</li>
-        </ul>
-      </div>
-
-      <!-- PLAN B：単独講習 -->
-      <div class="team-card">
-        <div class="team-level">PLAN B</div>
-        <h3>単独チーム講習</h3>
-        <p class="team-desc">
-          1チーム単独での開催をご希望のチーム向け。少人数からでも対応可能なオプションプランです。
-        </p>
-        <ul class="team-meta">
-          <li>最低3名から催行</li>
-          <li>1日完結</li>
-          <li>日程・会場は貴チームのご希望に合わせ調整</li>
-          <li>合同講習と比較し基本料あり</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="team-features">
-      <div class="team-feature">
-        <strong>同等の資格価値</strong>
-        個人受験と同じ問題・採点基準で実施。チーム講習でも資格の重みは変わりません。
-      </div>
-      <div class="team-feature">
-        <strong>協会主導の運営</strong>
-        集客・会場手配・当日進行はすべて協会が一貫対応。チーム側のご負担を最小限に。
-      </div>
-      <div class="team-feature">
-        <strong>柔軟なご相談</strong>
-        日程・人数・場所はお気軽にご相談ください。試験運用期間中は柔軟に対応いたします。
-      </div>
-    </div>
-
-    <div class="team-cta">
-      <p class="team-cta-lead">
-        ※ 対面プラン 受講料 29,700円／名＋対面講習費 80,000円／日、オンラインプラン 1名あたり 35,200円（試行中）。<br>
-        ※ チーム講習でも資格は個人受験と同じ「チアタンブリング指導ライセンス 2級」が交付されます。
+    <div class="lp-note">
+      <h4>3級のチーム一括もご利用いただけます</h4>
+      <ul>
+        <li>アシスタント・選手・保護者まで含めて、<b>チーム全員に同じ安全基準</b>を持たせられます</li>
+        <li>10名以上で <b>1名 2,200円</b>（通常3,300円）・オンラインのみ・15歳以上</li>
+      </ul>
+      <p class="lp-small">※ 協会手配・チーム手配のいずれも可能です（協会手配の場合は会場費を実費で別途）<br>
+      ※ <b>2級・1級はオンラインでは取得できません。</b>出張講習も対面で実施します。</p>
+      <p class="center" style="margin-top:22px">
+        <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSf6bsIej43tnHLbvO78ZxwwtccN9nryaNKyePhj3HtfgkEjPQ/viewform" target="_blank" rel="noopener">チーム講習を申し込む →</a>
       </p>
-      <div class="team-cta-actions">
-        <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSf6bsIej43tnHLbvO78ZxwwtccN9nryaNKyePhj3HtfgkEjPQ/viewform" target="_blank" rel="noopener">
-          チーム講習を申し込む →
-        </a>
-        <a class="btn-pdf" href="assets/pdf/cta-team-training-pamphlet.pdf" target="_blank" rel="noopener">
-          <span class="pdf-icon">PDF</span>
-          パンフレットを見る
-        </a>
-        <a class="btn-ghost" href="mailto:cheer.tumbling.association@gmail.com?subject=%E3%80%90%E3%83%81%E3%83%BC%E3%83%A0%E8%AC%9B%E7%BF%92%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
-          メールで問い合わせる
-        </a>
-      </div>
     </div>
   </div>
 </section>
@@ -1366,40 +1316,15 @@ footer.site-footer{
   <div class="container">
     <p class="eyebrow center">FAQ</p>
     <h2 class="section-title">よくあるご質問</h2>
-
     <div class="faq-list">
-      <details class="faq-item">
-        <summary>未経験でも受講できますか？</summary>
-        <div class="answer">2級は18歳以上であれば受講可能です。安全基礎から体系的に学びます。</div>
-      </details>
-      <details class="faq-item">
-        <summary>試験に不合格になった場合は？</summary>
-        <div class="answer">再試験はありません。翌年度に改めてお申込みいただきます。</div>
-      </details>
-      <details class="faq-item">
-        <summary>オンライン受験は可能ですか？</summary>
-        <div class="answer">試験は会場で実施します。資格の重みと責任を担保するためです。</div>
-      </details>
-      <details class="faq-item">
-        <summary>受講料の返金はありますか？</summary>
-        <div class="answer">受講者都合による返金は行っておりません。</div>
-      </details>
-      <details class="faq-item">
-        <summary>1級は誰でも受けられますか？</summary>
-        <div class="answer">1級は2級取得者のみ受講可能です。</div>
-      </details>
-      <details class="faq-item">
-        <summary>チーム単位で受講することはできますか？</summary>
-        <div class="answer">はい、チーム単位での出張講習も承っております。複数チーム合同で開催する「エリア合同講習」と、1チーム単独で開催する「単独チーム講習」の2モデルをご用意しています。詳細は<a href="#team">チーム講習セクション</a>をご覧いただくか、<a href="mailto:cheer.tumbling.association@gmail.com?subject=%E3%80%90%E3%83%81%E3%83%BC%E3%83%A0%E8%AC%9B%E7%BF%92%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">協会メール</a>までご相談ください。</div>
-      </details>
-      <details class="faq-item">
-        <summary>チーム講習で取得した資格は、個人受験と同じものですか？</summary>
-        <div class="answer">はい、同一の資格です。試験問題・採点基準は個人受験と完全に同一で、交付される認定証も同じ「チアタンブリング指導ライセンス 2級」となります。チーム講習でも資格の重みは変わりません。</div>
-      </details>
-      <details class="faq-item">
-        <summary>チーム講習の料金はいくらですか？</summary>
-        <div class="answer">2026年度は試験運用期間として、料金体系の詳細はご相談時に個別にご案内しております。受講料は個人受験と同等（29,700円／名）をベースに、開催形態・地域・人数によって調整いたします。まずはお気軽にお問い合わせください。</div>
-      </details>
+      <details class="faq-item"><summary>3級を受けないと2級は受けられませんか。</summary><div class="answer">いいえ。2級はどなたでも直接お申し込みいただけます。3級は、指導者以外の方にも同じ安全基準を持っていただくための級です。</div></details>
+      <details class="faq-item"><summary>オンラインだけで2級の資格は取得できますか。</summary><div class="answer">できません。2級・1級は必ず対面講習を受けていただきます。安全を担保するには、実際の動きを見て、その場で質疑を交わすことが欠かせないためです。</div></details>
+      <details class="faq-item"><summary>試験はいつ行いますか。</summary><div class="answer">対面講習の当日に行います。会場にお越しいただくのは1日だけです。</div></details>
+      <details class="faq-item"><summary>不合格になった場合はどうなりますか。</summary><div class="answer">再試験は実施しません。改めてお申し込みのうえ、別の回をご受講ください。</div></details>
+      <details class="faq-item"><summary>3級は未経験でも大丈夫ですか。</summary><div class="answer">はい。15歳以上であればどなたでも受講できます。アシスタントコーチの方、選手ご本人、保護者の方も対象です。</div></details>
+      <details class="faq-item"><summary>申込はいつでもできますか。</summary><div class="answer">はい。受付は通年です。8日程の中から、ご都合のよい回をお選びください。</div></details>
+      <details class="faq-item"><summary>チーム単位で申し込めますか。</summary><div class="answer">はい。8日程へのご参加のほか、協会のコーチがチームの会場に伺う出張講習も承っています（3名から）。3級はチーム一括（10名以上）で1名2,200円です。</div></details>
+      <details class="faq-item"><summary>特定の技だけ（バク転など）の講習はできますか。</summary><div class="answer">実演・補助法クリニックとして承ります。安全の土台を重視するため、2級の講習とセットでのご提供です。</div></details>
     </div>
   </div>
 </section>
@@ -1418,13 +1343,16 @@ footer.site-footer{
       <span class="gold">2027年度</span> 受講受験生<br>受付中
     </h2>
     <p>
-      申込は指定のGoogleフォームよりお手続きください。<br>
+      申込の受付は<b>通年</b>です。指定のGoogleフォームよりお手続きください。<br>
       お申込み後、登録メールアドレス宛に受講案内をお送りいたします。
     </p>
     <div class="deadline-block">
-      <span class="label">APPLICATION DEADLINE</span>
-      <span class="date">2027.04.15 (THU)</span>
+      <span class="label">APPLICATION</span>
+      <span class="date">通年受付</span>
     </div>
+    <p class="lp-small center" style="margin-top:10px;color:rgba(255,255,255,.78)">
+      8日程から受講する1回をお選びください。締切は、選ばれた回の<b>開催3週間前</b>です。
+    </p>
     <br>
     <!-- ▼ 個人向け：申込フォーム + 資料請求（Googleフォーム） -->
     <div class="apply-cta">
@@ -1447,9 +1375,9 @@ footer.site-footer{
         <a class="btn-team-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSf6bsIej43tnHLbvO78ZxwwtccN9nryaNKyePhj3HtfgkEjPQ/viewform" target="_blank" rel="noopener">
           チーム講習を申し込む →
         </a>
-        <a class="btn-team-pdf" href="assets/pdf/cta-team-training-pamphlet.pdf" target="_blank" rel="noopener">
+        <a class="btn-team-pdf" href="assets/pdf/cta-licence-pamphlet-2027.pdf" target="_blank" rel="noopener">
           <span class="pdf-icon">PDF</span>
-          チーム講習パンフレット（無料）
+          受講案内パンフレット（PDF・無料）
         </a>
       </div>
     </div>
